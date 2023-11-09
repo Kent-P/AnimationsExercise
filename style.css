@@ -1,0 +1,98 @@
+div {
+    border: 10px solid darkcyan;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+  
+  #red {
+    background-color: red;
+  }
+  
+  #green {
+    background-color: green;
+  }
+  
+  #blue {
+    background-color: blue;
+  }
+  
+  #orange {
+    background-color: orange;
+  }
+  
+  #purple {
+    background-color: purple;
+  }
+  
+  #brown {
+    background-color: brown;
+  }
+  
+  /* START BELOW THIS LINE */
+
+  #red {
+    transition-property: width;
+    transition-duration: 3s;
+  }
+
+  #red:hover {
+    width: 300px;
+  }
+
+  #green {
+      transition: background-color 0s 0s linear;
+      transition: transform 2s 1s linear;
+  }
+
+  #green:hover {
+    background-color: yellow;
+    transform: rotate(360deg);
+  }
+
+  #blue {
+    animation: expand 8s linear 0s normal ;
+  }
+
+  @keyframes expand {
+    50% {
+        width: 450px;
+    }
+  }
+
+  #orange {
+    transition: all 5s cubic-bezier(1, -0.03, 1, 1.32);
+  }
+
+  #orange:hover {
+    transform: rotate(1080deg);
+  }
+
+  #purple {
+    animation: circle 2s forwards;
+  }
+
+  @keyframes circle {
+    
+    100% {
+        border-radius: 85px;
+    }
+  }
+
+  #brown {
+    animation: flip 4s infinite;
+  }
+
+  @keyframes flip{
+    25% {
+        transform: translateX(200px);
+    }
+
+    50% {
+        transform: translateY(-200px) rotateX(180deg) translateX(200px);
+    }
+
+    75% {
+        transform: translateX(200px);
+    }
+  }
